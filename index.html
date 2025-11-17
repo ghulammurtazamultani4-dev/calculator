@@ -1,118 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Calculator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f0f0;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 320px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            border-radius: 10px;
-        }
-        input {
-            width: 90%;
-            height: 50px;
-            font-size: 22px;
-            margin-bottom: 15px;
-            text-align: right;
-            padding: 5px;
-        }
-        button {
-            width: 22%;
-            height: 45px;
-            font-size: 18px;
-            margin: 5px;
-            border: none;
-            background: #4285f4;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #3367d6;
-        }
+    .container {
+      width: 320px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
 
-        /* Ad Box Style */
-        .ad-box {
-            width: 100%;
-            margin: 20px 0;
-            background: #e8e8e8;
-            padding: 10px;
-            border-radius: 8px;
-        }
-    </style>
+    input {
+      width: 90%;
+      height: 50px;
+      font-size: 22px;
+      margin-bottom: 15px;
+      text-align: right;
+      padding: 5px;
+    }
+
+    button {
+      width: 22%;
+      height: 45px;
+      font-size: 18px;
+      margin: 5px;
+      border: none;
+      background: #4285f4;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3367d6;
+    }
+
+    .ad-box {
+      width: 100%;
+      margin: 20px 0;
+      padding: 10px;
+      background: #e8e8e8;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
+  <h2>Scientific Calculator</h2>
 
-    <h2>Scientific Calculator</h2>
+  <!-- AD #1 (Link Ad) -->
+  <div class="ad-box">
+    <a href="https://www.effectivegatecpm.com/ribk2hhes?key=abff5f6577844397b3b2eff187a22448" target="_blank">
+      Click Here — Advertisement
+    </a>
+  </div>
 
-    <!-- 🔥 Adsterra Ad (Top Ad) -->
-    <div class="ad-box">
-        <!-- Your Ad Code -->
-        <script type='text/javascript' src='//pl28072236.effectivegatecpm.com/d8/51/9c/d8519c835e35bed773f0634120d5fe66.js'></script>
+  <!-- AD #2 -->
+  <div class="ad-box">
+    <script type='text/javascript' src='//pl28072384.effectivegatecpm.com/16/46/93/164693ff7ca0c5ea09845dce5788fba5.js'></script>
+  </div>
+
+  <!-- Calculator Section -->
+  <div class="container">
+    <input type="text" id="display" disabled />
+
+    <div>
+      <button onclick="add('7')">7</button>
+      <button onclick="add('8')">8</button>
+      <button onclick="add('9')">9</button>
+      <button onclick="add('/')">/</button>
+
+      <button onclick="add('4')">4</button>
+      <button onclick="add('5')">5</button>
+      <button onclick="add('6')">6</button>
+      <button onclick="add('*')">*</button>
+
+      <button onclick="add('1')">1</button>
+      <button onclick="add('2')">2</button>
+      <button onclick="add('3')">3</button>
+      <button onclick="add('-')">-</button>
+
+      <button onclick="add('0')">0</button>
+      <button onclick="add('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="add('+')">+</button>
+
+      <button onclick="clearDisplay()" style="width: 95%; background: red">C</button>
     </div>
+  </div>
 
-    <div class="container">
-        <input type="text" id="display" disabled>
-
-        <div>
-            <button onclick="add('7')">7</button>
-            <button onclick="add('8')">8</button>
-            <button onclick="add('9')">9</button>
-            <button onclick="add('/')">/</button>
-
-            <button onclick="add('4')">4</button>
-            <button onclick="add('5')">5</button>
-            <button onclick="add('6')">6</button>
-            <button onclick="add('*')">*</button>
-
-            <button onclick="add('1')">1</button>
-            <button onclick="add('2')">2</button>
-            <button onclick="add('3')">3</button>
-            <button onclick="add('-')">-</button>
-
-            <button onclick="add('0')">0</button>
-            <button onclick="add('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="add('+')">+</button>
-
-            <button onclick="clearDisplay()" style="width:95%; background:red;">C</button>
-        </div>
-    </div>
-
-    <!-- 🔥 Bottom Ad -->
-    <div class="ad-box">
-        <script type='text/javascript' src='//pl28072236.effectivegatecpm.com/d8/51/9c/d8519c835e35bed773f0634120d5fe66.js'></script>
-    </div>
-
-    <script>
-        function add(value) {
-            document.getElementById("display").value += value;
-        }
-        function calculate() {
-            try {
-                document.getElementById("display").value = eval(document.getElementById("display").value);
-            } catch {
-                document.getElementById("display").value = "Error";
-            }
-        }
-        function clearDisplay() {
-            document.getElementById("display").value = "";
-        }
+  <!-- AD #3 (iFrame Ad) -->
+  <div class="ad-box">
+    <script type="text/javascript">
+      atOptions = {
+        key: '6aba7b2c21b992d0adeb007b378ac1d5',
+        format: 'iframe',
+        height: 50,
+        width: 320,
+        params: {},
+      };
     </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/6aba7b2c21b992d0adeb007b378ac1d5/invoke.js"></script>
+  </div>
 
+  <!-- AD #4 -->
+  <div class="ad-box">
+    <script async="async" data-cfasync="false" src="//pl28072385.effectivegatecpm.com/abc2c1412fd740f0f402be50991e2b70/invoke.js"></script>
+    <div id="container-abc2c1412fd740f0f402be50991e2b70"></div>
+  </div>
+
+  <script>
+    function add(value) {
+      document.getElementById("display").value += value;
+    }
+
+    function calculate() {
+      try {
+        document.getElementById("display").value = eval(
+          document.getElementById("display").value
+        );
+      } catch {
+        document.getElementById("display").value = "Error";
+      }
+    }
+
+    function clearDisplay() {
+      document.getElementById("display").value = "";
+    }
+  </script>
 </body>
 </html>
-
